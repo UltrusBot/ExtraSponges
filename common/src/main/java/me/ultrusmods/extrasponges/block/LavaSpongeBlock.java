@@ -12,6 +12,8 @@ import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.level.redstone.Orientation;
+import org.jetbrains.annotations.Nullable;
 
 public class LavaSpongeBlock extends Block {
 
@@ -37,9 +39,9 @@ public class LavaSpongeBlock extends Block {
     }
 
     @Override
-    public void neighborChanged(BlockState state, Level level, BlockPos pos, Block block, BlockPos fromPos, boolean notify) {
+    public void neighborChanged(BlockState state, Level level, BlockPos pos, Block neighborBlock, @Nullable Orientation orientation, boolean movedByPiston) {
         this.update(level, pos);
-        super.neighborChanged(state, level, pos, block, fromPos, notify);
+        super.neighborChanged(state, level, pos, neighborBlock, orientation, movedByPiston);
     }
 
 
@@ -57,25 +59,25 @@ public class LavaSpongeBlock extends Block {
             }
         }, (checkedPos) -> {
             if (checkedPos.equals(pos)) {
-                return true;
+                return BlockPos.TraversalNodeStatus.ACCEPT;
             } else {
                 BlockState blockState = level.getBlockState(checkedPos);
                 FluidState fluidState = level.getFluidState(checkedPos);
                 if (!fluidState.is(FluidTags.LAVA)) {
-                    return false;
+                    return BlockPos.TraversalNodeStatus.SKIP;
                 } else {
                     Block block = blockState.getBlock();
                     if (block instanceof BucketPickup bucketPickup) {
                         if (!bucketPickup.pickupBlock(null, level, checkedPos, blockState).isEmpty()) {
-                            return true;
+                            return BlockPos.TraversalNodeStatus.ACCEPT;
                         }
                     }
                     if (blockState.getBlock() instanceof LiquidBlock) {
                         level.setBlock(checkedPos, Blocks.AIR.defaultBlockState(), 3);
                     } else {
-                        return false;
+                        return BlockPos.TraversalNodeStatus.SKIP;
                     }
-                    return true;
+                    return BlockPos.TraversalNodeStatus.ACCEPT;
                 }
             }
         }) > 1;

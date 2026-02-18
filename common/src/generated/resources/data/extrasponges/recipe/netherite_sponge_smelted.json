@@ -3,9 +3,7 @@
   "category": "blocks",
   "cookingtime": 200,
   "experience": 0.15,
-  "ingredient": {
-    "item": "extrasponges:wet_netherite_sponge"
-  },
+  "ingredient": "extrasponges:wet_netherite_sponge",
   "result": {
     "id": "extrasponges:netherite_sponge"
   }

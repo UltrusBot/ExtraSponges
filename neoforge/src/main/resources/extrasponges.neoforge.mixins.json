@@ -1,7 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "me.ultrusmods.extrasponges.mixin",
+  "package": "me.ultrusmods.extrasponges.mixin.client",
   "compatibilityLevel": "JAVA_21",
   "mixins": [],
   "client": [

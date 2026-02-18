@@ -1,15 +1,15 @@
 {
     "itemGroup.extrasponges.items": "Ekstra Süngerler",
-    "block.extrasponges.iron_sponge": "Demir Sünger",
-    "block.extrasponges.gold_sponge": "Altın Sünger",
-    "block.extrasponges.diamond_sponge": "Elmas Sünger",
-    "block.extrasponges.emerald_sponge": "Zümrüt Sünger",
-    "block.extrasponges.netherite_sponge": "Netherit Sünger",
-    "block.extrasponges.wet_iron_sponge": "Islak Demir Sünger",
-    "block.extrasponges.wet_gold_sponge": "Islak Altın Sünger",
-    "block.extrasponges.wet_diamond_sponge": "Islak Elmas Sünger",
-    "block.extrasponges.wet_emerald_sponge": "Islak Zümrüt Sünger",
-    "block.extrasponges.wet_netherite_sponge": "Islak Netherit Sünger",
-    "block.extrasponges.lava_sponge": "Lav Sünger",
-    "block.extrasponges.wet_lava_sponge": "Erimiş Lav Sünger"
+    "item.extrasponges.iron_sponge": "Demir Sünger",
+    "item.extrasponges.gold_sponge": "Altın Sünger",
+    "item.extrasponges.diamond_sponge": "Elmas Sünger",
+    "item.extrasponges.emerald_sponge": "Zümrüt Sünger",
+    "item.extrasponges.netherite_sponge": "Netherit Sünger",
+    "item.extrasponges.wet_iron_sponge": "Islak Demir Sünger",
+    "item.extrasponges.wet_gold_sponge": "Islak Altın Sünger",
+    "item.extrasponges.wet_diamond_sponge": "Islak Elmas Sünger",
+    "item.extrasponges.wet_emerald_sponge": "Islak Zümrüt Sünger",
+    "item.extrasponges.wet_netherite_sponge": "Islak Netherit Sünger",
+    "item.extrasponges.lava_sponge": "Lav Sünger",
+    "item.extrasponges.wet_lava_sponge": "Erimiş Lav Sünger"
   }

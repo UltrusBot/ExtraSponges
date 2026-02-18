@@ -1,15 +1,15 @@
 {
   "itemGroup.extrasponges.items": "Экстра Губки",
-  "block.extrasponges.iron_sponge": "Железная губка",
-  "block.extrasponges.gold_sponge": "Золотая губка",
-  "block.extrasponges.diamond_sponge": "Алмазная губка",
-  "block.extrasponges.emerald_sponge": "Изумрудная губка",
-  "block.extrasponges.netherite_sponge": "Незеритовая губка",
-  "block.extrasponges.wet_iron_sponge": "Мокрая железная губка",
-  "block.extrasponges.wet_gold_sponge": "Мокрая золотая губка",
-  "block.extrasponges.wet_diamond_sponge": "Мокрая алмазная губка",
-  "block.extrasponges.wet_emerald_sponge": "Мокрая изумрудная губка",
-  "block.extrasponges.wet_netherite_sponge": "Мокрая незеритовая губка",
-  "block.extrasponges.lava_sponge": "Лавовая губка",
-  "block.extrasponges.wet_lava_sponge": "Расплавленная лавовая губка"
+  "item.extrasponges.iron_sponge": "Железная губка",
+  "item.extrasponges.gold_sponge": "Золотая губка",
+  "item.extrasponges.diamond_sponge": "Алмазная губка",
+  "item.extrasponges.emerald_sponge": "Изумрудная губка",
+  "item.extrasponges.netherite_sponge": "Незеритовая губка",
+  "item.extrasponges.wet_iron_sponge": "Мокрая железная губка",
+  "item.extrasponges.wet_gold_sponge": "Мокрая золотая губка",
+  "item.extrasponges.wet_diamond_sponge": "Мокрая алмазная губка",
+  "item.extrasponges.wet_emerald_sponge": "Мокрая изумрудная губка",
+  "item.extrasponges.wet_netherite_sponge": "Мокрая незеритовая губка",
+  "item.extrasponges.lava_sponge": "Лавовая губка",
+  "item.extrasponges.wet_lava_sponge": "Расплавленная лавовая губка"
 }

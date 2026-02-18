@@ -3,9 +3,7 @@
   "category": "blocks",
   "cookingtime": 200,
   "experience": 0.15,
-  "ingredient": {
-    "item": "extrasponges:wet_diamond_sponge"
-  },
+  "ingredient": "extrasponges:wet_diamond_sponge",
   "result": {
     "id": "extrasponges:diamond_sponge"
   }

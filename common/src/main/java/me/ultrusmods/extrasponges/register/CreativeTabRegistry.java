@@ -2,13 +2,12 @@ package me.ultrusmods.extrasponges.register;
 
 import me.ultrusmods.extrasponges.Constants;
 import me.ultrusmods.extrasponges.platform.Services;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-
-import java.util.function.BiConsumer;
 
 public class CreativeTabRegistry {
     public static final CreativeModeTab EXTRA_SPONGES = Services.PLATFORM.getCreativeTab()
@@ -28,7 +27,7 @@ public class CreativeTabRegistry {
             })
             .build();
 
-    public static void register(BiConsumer<ResourceLocation, CreativeModeTab> registerFunction) {
-        registerFunction.accept(Constants.id("sponge_items"), EXTRA_SPONGES);
+    public static void register() {
+        Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, Constants.id("sponge_items"), EXTRA_SPONGES);
     }
 }

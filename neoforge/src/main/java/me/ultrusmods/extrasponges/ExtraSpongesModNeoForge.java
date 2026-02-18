@@ -10,18 +10,17 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.registries.RegisterEvent;
 
 @Mod(Constants.MOD_ID)
-public class ExtraSpongesNeoforge {
+public class ExtraSpongesModNeoForge {
 
-    public ExtraSpongesNeoforge(IEventBus eventBus) {
-        ExtraSpongesCommon.init();
+    public ExtraSpongesModNeoForge(IEventBus eventBus) {
+        ExtraSpongesMod.init();
         eventBus.addListener(this::registerEvent);
-
 
     }
 
     public void registerEvent(RegisterEvent event) {
-        event.register(Registries.BLOCK, blockRegisterHelper -> BlockRegistry.register(blockRegisterHelper::register));
-        event.register(Registries.ITEM, itemRegisterHelper -> ItemRegistry.register(itemRegisterHelper::register));
-        event.register(Registries.CREATIVE_MODE_TAB, creativeModeTabRegisterHelper -> CreativeTabRegistry.register(creativeModeTabRegisterHelper::register));
+        event.register(Registries.BLOCK, blockRegisterHelper -> BlockRegistry.register());
+        event.register(Registries.ITEM, itemRegisterHelper -> ItemRegistry.register());
+        event.register(Registries.CREATIVE_MODE_TAB, creativeModeTabRegisterHelper -> CreativeTabRegistry.register());
     }
 }

@@ -3,9 +3,7 @@
   "category": "blocks",
   "cookingtime": 200,
   "experience": 0.15,
-  "ingredient": {
-    "item": "extrasponges:wet_iron_sponge"
-  },
+  "ingredient": "extrasponges:wet_iron_sponge",
   "result": {
     "id": "extrasponges:iron_sponge"
   }

@@ -12,6 +12,8 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.level.redstone.Orientation;
+import org.jetbrains.annotations.Nullable;
 
 public class ExtraSpongeBlock extends Block {
 
@@ -36,9 +38,9 @@ public class ExtraSpongeBlock extends Block {
     }
 
     @Override
-    public void neighborChanged(BlockState state, Level level, BlockPos pos, Block block, BlockPos fromPos, boolean notify) {
+    public void neighborChanged(BlockState state, Level level, BlockPos pos, Block neighborBlock, @Nullable Orientation orientation, boolean movedByPiston) {
         this.update(level, pos);
-        super.neighborChanged(state, level, pos, block, fromPos, notify);
+        super.neighborChanged(state, level, pos, neighborBlock, orientation, movedByPiston);
     }
 
     protected void update(Level level, BlockPos pos) {
@@ -56,17 +58,17 @@ public class ExtraSpongeBlock extends Block {
             }
         }, (checkedPos) -> {
             if (checkedPos.equals(pos)) {
-                return true;
+                return BlockPos.TraversalNodeStatus.ACCEPT;
             } else {
                 BlockState blockState = world.getBlockState(checkedPos);
                 FluidState fluidState = world.getFluidState(checkedPos);
                 if (!fluidState.is(FluidTags.WATER)) {
-                    return false;
+                    return BlockPos.TraversalNodeStatus.SKIP;
                 } else {
                     Block block = blockState.getBlock();
                     if (block instanceof BucketPickup bucketPickup) {
                         if (!bucketPickup.pickupBlock(null, world, checkedPos, blockState).isEmpty()) {
-                            return true;
+                            return BlockPos.TraversalNodeStatus.ACCEPT;
                         }
                     }
 
@@ -74,7 +76,7 @@ public class ExtraSpongeBlock extends Block {
                         world.setBlock(checkedPos, Blocks.AIR.defaultBlockState(), 3);
                     } else {
                         if (!blockState.is(Blocks.KELP) && !blockState.is(Blocks.KELP_PLANT) && !blockState.is(Blocks.SEAGRASS) && !blockState.is(Blocks.TALL_SEAGRASS)) {
-                            return false;
+                            return BlockPos.TraversalNodeStatus.SKIP;
                         }
 
                         BlockEntity blockEntity = blockState.hasBlockEntity() ? world.getBlockEntity(checkedPos) : null;
@@ -82,7 +84,7 @@ public class ExtraSpongeBlock extends Block {
                         world.setBlock(checkedPos, Blocks.AIR.defaultBlockState(), 3);
                     }
 
-                    return true;
+                    return BlockPos.TraversalNodeStatus.ACCEPT;
                 }
             }
         }) > 1;

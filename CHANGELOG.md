@@ -1,2 +1,1 @@
-- Add Russian translation, thanks to @EnderDrag0n in PR #8.
-- Allow mod to load on 1.21.1
+- Updated to 1.21.11

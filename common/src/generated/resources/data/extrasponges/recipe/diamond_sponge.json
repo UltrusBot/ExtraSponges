@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "S": {
-      "item": "extrasponges:gold_sponge"
-    },
-    "U": {
-      "item": "minecraft:diamond"
-    }
+    "S": "extrasponges:gold_sponge",
+    "U": "minecraft:diamond"
   },
   "pattern": [
     "SSS",
