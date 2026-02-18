@@ -15,7 +15,7 @@ object Properties {
 
     const val HOMEPAGE = "https://ultrusmods.me/mod/extrasponges/"
     const val CURSEFORGE_PROJECT_ID = "457043"
-    const val MODRINTH_PROJECT_ID = "extrasponges"
+    const val MODRINTH_PROJECT_ID = "poGrqY8n"
     const val GITHUB_REPO = "UltrusBot/ExtraSponges"
     const val GITHUB_COMMITISH = "1.21.11"
 
