@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "key": {
     "B": "minecraft:basalt",
     "M": "minecraft:magma_block",
@@ -12,7 +11,6 @@
     "MSM"
   ],
   "result": {
-    "count": 1,
     "id": "extrasponges:lava_sponge"
   }
 }

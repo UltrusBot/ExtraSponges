@@ -8,7 +8,7 @@
         "${mod_author}"
     ],
     "contributors": [
-        ${fabric_mod_contributors}
+        "${mod_contributors}"
     ],
     "contact": {
         "homepage": "${homepage}",

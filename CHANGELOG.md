@@ -1,1 +1,2 @@
-- Updated to 1.21.11
+- Updated to 26.2
+- Added all the extra sponges to the fast flat archetype for sulfur cubes.

@@ -1,0 +1,14 @@
+{
+  "values": [
+    "extrasponges:iron_sponge",
+    "extrasponges:gold_sponge",
+    "extrasponges:diamond_sponge",
+    "extrasponges:netherite_sponge",
+    "extrasponges:wet_iron_sponge",
+    "extrasponges:wet_gold_sponge",
+    "extrasponges:wet_diamond_sponge",
+    "extrasponges:wet_netherite_sponge",
+    "extrasponges:lava_sponge",
+    "extrasponges:wet_lava_sponge"
+  ]
+}

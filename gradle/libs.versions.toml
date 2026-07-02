@@ -1,24 +1,24 @@
 [versions]
-minecraft = "1.21.11"
-fabric_loader = "0.18.4"
-fabric_api = "0.141.3+1.21.11"
-neoforge = "21.11.38-beta"
+minecraft = "26.2"
+fabric_loader = "0.19.3"
+fabric_api = "0.154.0+26.2"
+neoforge = "26.2.0.7-beta"
 modmenu = "17.0.0-beta.2"
 
 # Mixin
 mixin_extras = "0.5.3"
 
 # Plugins
-fabric_loom = "1.15-SNAPSHOT"
+fabric_loom = "1.17.13"
 publishing = "1.1.0"
-neoforge_moddev = "2.0.140"
+neoforge_moddev = "2.0.141"
 
 
 [libraries]
 minecraft = { module = "com.mojang:minecraft", version.ref = "minecraft" }
 fabric_loader = { module = "net.fabricmc:fabric-loader", version.ref = "fabric_loader" }
 fabric_api = { module = "net.fabricmc.fabric-api:fabric-api", version.ref = "fabric_api" }
-neoforge = { module = "net.minecraftforge:forge", version.ref = "neoforge" }
+neoforge = { module = "net.neoforged:neoforge", version.ref = "neoforge" }
 
 # Extra Libraries
 modmenu = { module = "com.terraformersmc:modmenu", version.ref = "modmenu" }
@@ -27,7 +27,7 @@ modmenu = { module = "com.terraformersmc:modmenu", version.ref = "modmenu" }
 mixin_extras = { module = "io.github.llamalad7:mixinextras-common", version.ref = "mixin_extras" }
 
 [plugins]
-fabric_loom = { id = "fabric-loom", version.ref = "fabric_loom" }
+fabric_loom = { id = "net.fabricmc.fabric-loom", version.ref = "fabric_loom" }
 publishing = { id = "me.modmuss50.mod-publish-plugin", version.ref = "publishing" }
 neoforge_moddev = { id = "net.neoforged.moddev", version.ref = "neoforge_moddev" }
 #machete = { id = "io.github.p03w.machete", version.ref = "machete" }

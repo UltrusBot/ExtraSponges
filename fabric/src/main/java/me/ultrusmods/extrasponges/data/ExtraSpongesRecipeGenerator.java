@@ -1,24 +1,24 @@
 package me.ultrusmods.extrasponges.data;
 
 import me.ultrusmods.extrasponges.register.ItemRegistry;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.item.crafting.Ingredient;
 
 import java.util.concurrent.CompletableFuture;
 
-import static net.minecraft.data.recipes.RecipeBuilder.getDefaultRecipeId;
-
 public class ExtraSpongesRecipeGenerator extends FabricRecipeProvider {
 
-    public ExtraSpongesRecipeGenerator(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
+    public ExtraSpongesRecipeGenerator(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
         super(output, registriesFuture);
     }
 
@@ -57,8 +57,9 @@ public class ExtraSpongesRecipeGenerator extends FabricRecipeProvider {
 
                 SimpleCookingRecipeBuilder.smelting(Ingredient.of(wetForm),
                                 RecipeCategory.BUILDING_BLOCKS,
+                                CookingBookCategory.BLOCKS,
                                 resultItem, 0.15F, 200)
-                        .unlockedBy("has_wet_sponge", has(wetForm)).save(exporter, getDefaultRecipeId(resultItem).withSuffix("_smelted").toString());
+                        .unlockedBy("has_wet_sponge", has(wetForm)).save(exporter, BuiltInRegistries.ITEM.getKey(resultItem).withSuffix("_smelted").toString());
 
             }
         };
